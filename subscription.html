@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Subscription Plans | Library Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/CSS/subscription.css">
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <h1>Choose your reading plan</h1>
+      <p>Pay for the hours you need, or commit for months or years and pay less per day.</p>
+    </header>
+
+    <div class="tabs" role="tablist" aria-label="Billing type">
+      <button class="tab is-active" role="tab" aria-selected="true" data-type="hourly">Hourly</button>
+      <button class="tab" role="tab" aria-selected="false" data-type="monthly">Monthly</button>
+      <button class="tab" role="tab" aria-selected="false" data-type="yearly">Yearly</button>
+    </div>
+
+    <p class="tab-note" id="tabNote"></p>
+    <section class="plans" id="plans" aria-live="polite"></section>
+
+    <div class="summary" id="summary" hidden>
+      <div>
+        <span class="summary-label">Selected plan</span>
+        <strong id="summaryName"></strong>
+      </div>
+      <div class="summary-price" id="summaryPrice"></div>
+      <button class="btn btn-primary" id="continueBtn">Continue to payment</button>
+    </div>
+  </main>
+  <script src="assets/JS/subscription.js"></script>
+</body>
+</html>
