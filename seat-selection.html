@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Select Your Seat | Library Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/CSS/seat-selection.css">
+</head>
+<body>
+  <main class="page">
+
+    <header class="user-bar">
+      <div class="user-info">
+        <span class="label">Member</span>
+        <h2 id="userName">Aditya Sharma</h2>
+        <p class="phone" id="userPhone">+91 98765 43210</p>
+      </div>
+      <img class="user-photo" id="userPhoto" src="https://i.pravatar.cc/160?img=12" alt="Member photo">
+    </header>
+
+    <section class="seat-card">
+      <div class="seat-card-head">
+        <h1>Select your seat</h1>
+        <p>Choose an available seat in the reading hall.</p>
+      </div>
+
+      <div class="seat-block">
+        <div class="col-headers" id="colHeaders"></div>
+        <div class="seat-panel">
+          <div class="panel-bar"></div>
+          <div class="seat-rows" id="seatGrid"></div>
+        </div>
+      </div>
+
+      <div class="legend">
+        <div class="legend-item"><span class="dot dot-available"></span>Available</div>
+        <div class="legend-item"><span class="dot dot-selected"></span>Selected</div>
+        <div class="legend-item"><span class="dot dot-booked"></span>Booked</div>
+      </div>
+    </section>
+
+    <div class="summary" id="summary" hidden>
+      <div>
+        <span class="summary-label">Selected seat</span>
+        <strong id="summarySeat"></strong>
+      </div>
+      <button class="btn btn-primary" id="confirmBtn">Confirm seat</button>
+    </div>
+
+  </main>
+  <script src="assets/JS/seat-selection.js"></script>
+</body>
+</html>

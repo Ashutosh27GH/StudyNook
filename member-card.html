@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Membership Card | Library Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/CSS/member-card.css">
+</head>
+<body>
+  <main class="page">
+
+    <!-- STEP 1: Membership card only -->
+    <section class="step" id="stepMember">
+      <article class="member-card">
+        <div class="member-card-top">
+          <div class="member-name">
+            <span class="label">Member</span>
+            <h2 id="userName">Aditya Sharma</h2>
+            <p class="phone" id="userPhone">+91 98765 43210</p>
+          </div>
+          <img class="member-photo" id="userPhoto" src="https://i.pravatar.cc/160?img=12" alt="Member photo">
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="plan-row">
+          <span class="label">Subscription</span>
+          <strong id="planName">3 Months Plan</strong>
+        </div>
+
+        <div class="member-dates">
+          <div class="date-block">
+            <span class="label">Start date</span>
+            <strong id="startDate">01 Oct 2026</strong>
+          </div>
+          <div class="date-sep"></div>
+          <div class="date-block">
+            <span class="label">End date</span>
+            <strong id="endDate">31 Dec 2026</strong>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="payBtn" type="button">Proceed to pay</button>
+      </article>
+    </section>
+
+    <!-- STEP 2: member card (left) + seat selection (right) -->
+    <section class="step" id="stepSeats" hidden>
+      <div class="layout">
+
+        <aside class="member-card member-card--side">
+          <div class="member-card-top">
+            <div class="member-name">
+              <span class="label">Member</span>
+              <h2 id="sideName">Aditya Sharma</h2>
+              <p class="phone" id="sidePhone">+91 98765 43210</p>
+            </div>
+            <img class="member-photo" id="sidePhoto" src="https://i.pravatar.cc/160?img=12" alt="Member photo">
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="plan-row">
+            <span class="label">Subscription</span>
+            <strong id="sidePlan">3 Months Plan</strong>
+          </div>
+
+          <div class="member-dates">
+            <div class="date-block">
+              <span class="label">Start date</span>
+              <strong id="sideStart">01 Oct 2026</strong>
+            </div>
+            <div class="date-sep"></div>
+            <div class="date-block">
+              <span class="label">End date</span>
+              <strong id="sideEnd">31 Dec 2026</strong>
+            </div>
+          </div>
+
+          <div class="seat-row-info">
+            <span class="label">Seat</span>
+            <strong id="sideSeat">Not selected</strong>
+          </div>
+        </aside>
+
+        <div class="seat-card">
+          <div class="seat-card-head">
+            <h1>Select your seat</h1>
+            <p>Choose an available seat in the reading hall.</p>
+          </div>
+
+          <div class="seat-block">
+            <div class="col-headers" id="colHeaders"></div>
+            <div class="seat-panel">
+              <div class="panel-bar"></div>
+              <div class="seat-rows" id="seatGrid"></div>
+            </div>
+          </div>
+
+          <div class="legend">
+            <div class="legend-item"><span class="dot dot-available"></span>Available</div>
+            <div class="legend-item"><span class="dot dot-selected"></span>Selected</div>
+            <div class="legend-item"><span class="dot dot-booked"></span>Booked</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="summary" id="summary" hidden>
+        <div>
+          <span class="summary-label">Selected seat</span>
+          <strong id="summarySeat"></strong>
+        </div>
+        <button class="btn btn-primary" id="confirmBtn">Confirm &amp; pay</button>
+      </div>
+    </section>
+
+  </main>
+  <script src="assets/JS/member-card.js"></script>
+</body>
+</html>
